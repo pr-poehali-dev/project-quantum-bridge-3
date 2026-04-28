@@ -43,7 +43,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-zinc-600 text-sm">© 2024 Red1Dark Studio. Все права защищены.</p>
+          <p className="text-zinc-600 text-sm">© 2026 Red1Dark Studio. Все права защищены.</p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-zinc-600 hover:text-zinc-400 transition-colors text-sm">Политика конфиденциальности</a>
             <a href="#" className="text-zinc-600 hover:text-zinc-400 transition-colors text-sm">Философия</a>
