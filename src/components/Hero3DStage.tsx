@@ -46,7 +46,7 @@ export function Hero3DStage() {
             transform: "translate(-50%, -30%)",
             width: "1200px",
             height: "800px",
-            background: "radial-gradient(ellipse at center, rgba(99, 102, 241, 0.08) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse at center, rgba(220, 38, 38, 0.12) 0%, transparent 70%)",
           }}
         />
 
@@ -54,38 +54,69 @@ export function Hero3DStage() {
         <div className="relative z-10 pt-28 flex flex-col">
           {/* Hero text - contained and centered */}
           <div className="w-full flex justify-center px-6 mt-16">
-            <div className="w-full max-w-4xl">
+            <div className="w-full max-w-5xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="flex items-center gap-2 mb-6"
+              >
+                <div className="w-2 h-2 rounded-full bg-red-500" />
+                <span className="text-zinc-400 text-sm">Независимая веб-студия</span>
+              </motion.div>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl md:text-5xl lg:text-[56px] font-medium text-white leading-[1.1] text-balance"
+                className="text-5xl md:text-6xl lg:text-[72px] font-black text-white leading-[1.05] tracking-tight"
               >
-                Orbit - инструмент для планирования и создания продуктов
+                Разработка сайтов<br />и автоматизация
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="mt-6 text-lg text-zinc-400"
+                className="mt-6 text-lg text-zinc-400 max-w-lg"
               >
-                Система для современной разработки.
-                <br />
-                Управляйте задачами, проектами и дорожными картами.
+                Создаём лендинги, сайты и Telegram-решения<br />
+                для бизнеса и личных проектов
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="mt-8 flex items-center gap-6"
+                className="mt-10 flex items-center gap-6"
               >
-                <button className="px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm">
-                  Начать работу
+                <button className="px-6 py-3 bg-white text-zinc-900 font-semibold rounded-lg hover:bg-zinc-100 transition-colors text-sm flex items-center gap-2">
+                  Начать проект <span aria-hidden="true">→</span>
                 </button>
                 <button className="text-zinc-300 font-medium hover:text-white transition-colors flex items-center gap-2 text-sm">
-                  <span className="text-zinc-500">Новинка:</span> Orbit-агент для Slack
+                  Смотреть проекты
                   <span aria-hidden="true">→</span>
                 </button>
+              </motion.div>
+
+              {/* Trust badges */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.35 }}
+                className="mt-12 flex flex-wrap items-center gap-4"
+              >
+                {[
+                  { icon: "🪪", title: "НПД в РФ", sub: "Официальный статус" },
+                  { icon: "💬", title: "Прямое общение", sub: "Без посредников" },
+                  { icon: "⏱", title: "Реальные сроки", sub: "Без задержек" },
+                  { icon: "🛡", title: "Поддержка", sub: "После запуска" },
+                ].map((badge) => (
+                  <div key={badge.title} className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-zinc-800 bg-zinc-900/60">
+                    <span className="text-base">{badge.icon}</span>
+                    <div>
+                      <div className="text-white text-xs font-medium">{badge.title}</div>
+                      <div className="text-zinc-500 text-[11px]">{badge.sub}</div>
+                    </div>
+                  </div>
+                ))}
               </motion.div>
             </div>
           </div>

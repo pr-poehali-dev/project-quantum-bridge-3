@@ -3,76 +3,72 @@ import { ChevronRight, Plus } from "lucide-react"
 
 const featureCards = [
   {
-    title: "Планирование спринтов",
+    title: "Сайты под ключ",
     illustration: (
-      <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-lg">
-        <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 791 669"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="max-w-full max-h-full"
-        >
-          <path
-            opacity="0.25"
-            d="M377.449 24.2664L22.1248 192.099C9.24419 198.183 1.16249 211.29 1.51081 225.531L10.925 610.428C11.5763 637.054 39.9132 653.778 63.5378 641.48L409.448 461.403C421.355 455.204 428.824 442.895 428.824 429.471V56.8179C428.824 30.407 401.33 12.9865 377.449 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-          <path
-            opacity="0.25"
-            d="M497.594 24.2664L142.269 192.099C129.389 198.183 121.307 211.29 121.655 225.531L131.07 610.428C131.721 637.054 160.058 653.778 183.682 641.48L529.592 461.403C541.5 455.204 548.969 442.895 548.969 429.471V56.8179C548.969 30.407 521.475 12.9865 497.594 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-          <path
-            opacity="0.25"
-            d="M617.738 24.2664L262.414 192.099C249.533 198.183 241.451 211.29 241.8 225.531L251.214 610.428C251.865 637.054 280.202 653.778 303.827 641.48L649.737 461.403C661.644 455.204 669.113 442.895 669.113 429.471V56.8179C669.113 30.407 641.619 12.9865 617.738 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-          <path
-            opacity="0.25"
-            d="M737.883 24.2664L382.558 192.099C369.678 198.183 361.596 211.29 361.944 225.531L371.358 610.428C372.01 637.054 400.347 653.778 423.971 641.48L769.881 461.403C781.789 455.204 789.258 442.895 789.258 429.471V56.8179C789.258 30.407 761.764 12.9865 737.883 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-        </svg>
+      <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-lg p-8">
+        <div className="w-full space-y-3">
+          {["Лендинг", "Портфолио", "Корпоративный", "Визитка"].map((item, i) => (
+            <div key={item} className="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-zinc-800/60 border border-zinc-700/40" style={{ opacity: 1 - i * 0.18 }}>
+              <div className="w-2 h-2 rounded-full bg-red-500" />
+              <span className="text-zinc-300 text-sm">{item}</span>
+            </div>
+          ))}
+        </div>
       </div>
     ),
   },
   {
-    title: "Управление итерациями",
+    title: "Автоматизация бизнеса",
     illustration: (
-      <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-        <img
-          src="/images/speed-lines.png"
-          alt="Иллюстрация скорости"
-          className="w-full h-full object-cover"
-          style={{ filter: "invert(1)" }}
-        />
+      <div className="relative w-full h-full flex items-center justify-center overflow-hidden p-8">
+        <div className="w-full space-y-3">
+          <div className="flex items-center gap-3 p-3 rounded-xl bg-zinc-800/60 border border-zinc-700/40">
+            <span className="text-2xl">🤖</span>
+            <div>
+              <div className="text-white text-xs font-medium">Telegram-бот</div>
+              <div className="text-zinc-500 text-[11px]">Принимает заявки 24/7</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 p-3 rounded-xl bg-zinc-800/40 border border-zinc-700/30">
+            <span className="text-2xl">🔗</span>
+            <div>
+              <div className="text-zinc-300 text-xs font-medium">Интеграции API</div>
+              <div className="text-zinc-500 text-[11px]">CRM, платёжки, сервисы</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 p-3 rounded-xl bg-zinc-800/30 border border-zinc-700/20">
+            <span className="text-2xl">⚙️</span>
+            <div>
+              <div className="text-zinc-400 text-xs font-medium">Скрипты</div>
+              <div className="text-zinc-600 text-[11px]">Под любые задачи</div>
+            </div>
+          </div>
+        </div>
       </div>
     ),
   },
   {
-    title: "Когда важна точность",
+    title: "Поддержка после запуска",
     illustration: (
-      <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-        <img
-          src="/images/precision-workflow.png"
-          alt="Иллюстрация точного процесса"
-          className="w-full h-full object-cover"
-          style={{ filter: "invert(1)" }}
-        />
+      <div className="relative w-full h-full flex items-center justify-center overflow-hidden p-8">
+        <div className="w-full">
+          <div className="text-zinc-500 text-xs mb-3">Сопровождение проекта</div>
+          <div className="space-y-2">
+            {[
+              { label: "Консультации", done: true },
+              { label: "Обновления", done: true },
+              { label: "Доработки", done: true },
+              { label: "Техподдержка", done: false },
+            ].map((item) => (
+              <div key={item.label} className="flex items-center gap-2.5">
+                <div className={`w-4 h-4 rounded-full border flex items-center justify-center ${item.done ? "border-red-500 bg-red-500/20" : "border-zinc-700"}`}>
+                  {item.done && <span className="text-red-400 text-[10px]">✓</span>}
+                </div>
+                <span className={`text-sm ${item.done ? "text-zinc-300" : "text-zinc-600"}`}>{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     ),
   },
@@ -105,7 +101,7 @@ export function FeatureCardsSection() {
                 lineHeight: 1.1,
               }}
             >
-              Создан для современных команд
+              Цифровые решения для вашего бизнеса
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -115,10 +111,10 @@ export function FeatureCardsSection() {
               className="max-w-md"
             >
               <p className="text-zinc-400 leading-relaxed">
-                Orbit основан на практиках и принципах, которые отличают лучшие продуктовые команды:
-                фокус на главном, быстрое исполнение и внимание к качеству.{" "}
+                Мы создаём сайты и автоматизируем процессы, которые работают на ваш бизнес:
+                быстро, чисто и с реальной поддержкой после запуска.{" "}
                 <a href="#" className="text-white inline-flex items-center gap-1 hover:underline">
-                  Перейти на Orbit <ChevronRight className="w-4 h-4" />
+                  Смотреть проекты <ChevronRight className="w-4 h-4" />
                 </a>
               </p>
             </motion.div>
